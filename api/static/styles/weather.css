@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400;500;600;700&family=Permanent+Marker&display=swap');
+
+:root {
+  --white-color: #fff;
+  --dark-color: #222;
+  --body-bg-color: #fff;
+  --section-bg-color: #202834;
+  --navigation-item-hover-color: #3b5378;
+  --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 25px rgb(e e e / 20%);
+  --scroll-bar-color: #fff;
+  --scroll-thumb-color: #282f4e;
+  --scroll-thumb-hover-color: #454f6b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #B0E2FF;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+section {
+  position: relative;
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  height: calc(5rem + 1rem);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease;
+  transition-property: height, background;
+}
+
+.sticky {
+  height: calc(5rem + 1rem);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header .nav-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 200px;
+  padding-top: 50px;
+  transition: 0.3s ease;
+}
+
+.nav-close-btn,
+.nav-menu-btn {
+  display: none;
+}
+.nav-bar .logo {
+  font-family: 'Abril Fatface', serif;
+  color: var(--white-color);
+  font-size: 1.8em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: var(--text-shadow);
+}
+.navigation .nav-items a {
+  font-family: 'Caveat', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--white-color);
+  font-size: 1em;
+
+  text-decoration: none;
+  text-shadow: var(--text-shadow);
+}
+
+.nav-items a:hover,
+.nav-items a:active {
+  border-bottom: 2px solid #fff;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navigation .nav-items a i {
+  display: none;
+}
+
+.navigation .nav-items a:not(:last-child) {
+  margin-right: 45px;
+}
+
+.home {
+  min-height: 100vh;
+}
+
+.search-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 60%;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    color: #222;
+}
+
+.search-icon {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    margin-top: 2px; /* Adjust as needed to align with the search input */
+}
